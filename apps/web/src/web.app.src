@@ -1,0 +1,13 @@
+{application, web,
+	[
+		{description, "Web"},
+		{vsn, "1.0"},
+		{applications,
+			[kernel, stdlib, lager, cowboy, bson, mongodb]},
+		{mod, {web, []}},
+		{env, [
+			{http_port, 4004}, 
+			{http_listener_count, 20}
+		]}		
+	]
+}.
